@@ -1,1 +1,5 @@
-*.bin
+# Ignore everything
+*
+
+# But not directories
+!*/

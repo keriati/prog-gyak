@@ -9,7 +9,7 @@ std::string first_last(std::string fbe, std::string fki);
 int main(int argc, char *argv[]) {
     std::string result;
     std::string fbe = argv[1];
-    std::string fki;
+    std::string fki = argv[2];
 
     result = first_last(fbe, fki);
 
@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
 }
 
 std::string first_last(std::string fbe, std::string fki) {
+    std::cout << "Be: " << fbe << " Ki: " << fki << std::endl;
 
     if( ! fs::exists(fbe)) {
         return "Sikertelen file-nyitás!";
