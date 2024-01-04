@@ -1,8 +1,8 @@
 #include <iostream>
 #include <filesystem>
-// #include <new>
 
-namespace fs = std::filesystem;
+using namespace std;
+namespace fs = filesystem;
 
 std::string first_last(std::string fbe, std::string fki);
 
