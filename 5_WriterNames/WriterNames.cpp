@@ -4,20 +4,26 @@
 using namespace std;
 namespace fs = filesystem;
 
-std::string first_last(std::string fbe, std::string fki);
+string first_last(string fbe, string fki);
 
 int main(int argc, char *argv[]) {
-    std::string result;
-    std::string fbe = argv[1];
-    std::string fki = argv[2];
+    cout << "WriterNames" << endl;
+
+    string result;
+    if(argc != 2) {
+        cout << "Need 2 arguments!" << endl;
+        return 1;
+    }
+    string fbe = argv[1];
+    string fki = argv[2];
 
     result = first_last(fbe, fki);
 
-    std::cout << result << std::endl;
+    cout << result << endl;
 }
 
-std::string first_last(std::string fbe, std::string fki) {
-    std::cout << "Be: " << fbe << " Ki: " << fki << std::endl;
+string first_last(string fbe, string fki) {
+    cout << "Be: " << fbe << " Ki: " << fki << endl;
 
     if( ! fs::exists(fbe)) {
         return "Sikertelen file-nyitás!";
@@ -25,12 +31,12 @@ std::string first_last(std::string fbe, std::string fki) {
 
     int sorokSzama = 4;
 
-    std::string** sorok = new std::string*[sorokSzama];
+    string** sorok = new string*[sorokSzama];
 
     for (size_t i = 0; i < sorokSzama; i++)
     {
         int szavakSzama = 3;
-        sorok[i] = new std::string[5];
+        sorok[i] = new string[5];
         for (size_t j = 0; j < szavakSzama; j++)
         {
             sorok[i][j] = "asd";

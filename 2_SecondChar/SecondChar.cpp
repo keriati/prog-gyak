@@ -2,6 +2,8 @@
 
 #define SIZE 50
 
+using namespace std;
+
 int feltolt(char s_tb[50]);
 
 void torol(char tomb[50], int len);
@@ -9,10 +11,12 @@ void torol(char tomb[50], int len);
 bool isLetter(char ch);
 
 int main() {
+    cout << "SecondChar" << endl;
+
     char tomb[SIZE] = {};
     int len;
     len = feltolt(tomb);
-    std::cout << "You entered: " << tomb << std::endl;
+    cout << "You entered: " << tomb << endl;
     torol(tomb, len);
 }
 
@@ -31,7 +35,7 @@ void torol(char tomb[SIZE], int len) {
             torolt[i / 2] = tomb[i];
         }
     }
-    std::cout << "Result: " << torolt << std::endl;
+    cout << "Result: " << torolt << endl;
 }
 
 int feltolt(char s_tb[]) {
@@ -39,7 +43,7 @@ int feltolt(char s_tb[]) {
     char ch;
 
     while (i < SIZE) {
-        ch = std::cin.get();
+        ch = cin.get();
 
         if (ch == '\n') break;
 

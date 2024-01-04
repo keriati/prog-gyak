@@ -4,6 +4,14 @@
 
 using namespace std;
 
+string first_last(string fbe, string fki);
+
+int main(void) {
+    string f_be = "Writers.txt", f_ki = "Sretirw.txt";
+    cout << first_last(f_be, f_ki) << endl;
+    return 0;
+}
+
 string first_last(string fbe, string fki) {
     ifstream inputFile(fbe);
 
@@ -79,10 +87,4 @@ string first_last(string fbe, string fki) {
 
 
     return "Hibátlan futás!";
-}
-
-int main(void) {
-    string f_be = "Writers.txt", f_ki = "Sretirw.txt";
-    cout << first_last(f_be, f_ki) << endl;
-    return 0;
 }

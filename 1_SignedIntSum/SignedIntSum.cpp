@@ -2,11 +2,15 @@
 
 #define SIZE 10
 
+using namespace std;
+
 int beker(int be_tb[], int *min, int *max);
 
 void kiir(int szum, int min, int max);
 
 int main() {
+    cout << "SignedIntSum" << endl;
+
     int tomb[SIZE] = {};
     int min_odd, max_even, sum;
     sum = beker(tomb, &min_odd, &max_even);
@@ -14,7 +18,7 @@ int main() {
     return 0;
 }
 
-bool isSignedInteger(const std::string &input) {
+bool isSignedInteger(const string &input) {
     if (input.empty() || input == "-" || input == "+") {
         return false;
     }
@@ -36,7 +40,7 @@ int beker(int be_tb[], int *min, int *max) {
     int sum = 0;
     char ch;
 
-    std::string input;
+    string input;
 
     *min = INT_MAX;
     *max = INT_MIN;
@@ -45,13 +49,13 @@ int beker(int be_tb[], int *min, int *max) {
         while (!validInput) {
             input.clear();
 
-            while ((ch = std::cin.get()) != '\n') {
+            while ((ch = cin.get()) != '\n') {
                 input.push_back(ch);
             }
 
             if (!isSignedInteger(input)) continue;
 
-            int integerFromInput = std::stoi(input);
+            int integerFromInput = stoi(input);
 
             if (i == 0 && integerFromInput == 0 ||
                 i % 2 != 0 && integerFromInput % 2 != 0 ||
@@ -71,6 +75,6 @@ int beker(int be_tb[], int *min, int *max) {
 }
 
 void kiir(int szum, int min, int max) {
-    std::cout << "Sum: " << szum << ", Min odd: " << min << ", Max even: " << max << std::endl;
+    cout << "Sum: " << szum << ", Min odd: " << min << ", Max even: " << max << endl;
 }
 
