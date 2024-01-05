@@ -1,6 +1,6 @@
+#include <cmath>
 #include <fstream>
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 namespace fs = filesystem;
@@ -39,15 +39,16 @@ double area(string fbe) {
     elsoOldalak[i] = elsoOldal;
     masodikOldalak[i] = masodikOldal;
     hegyesSzogek[i] = hegyesSzog;
-    teruletek[i] = (elsoOldal * masodikOldal * sin(hegyesSzog * (M_PI / 180))) / 2;
+    teruletek[i] =
+        (elsoOldal * masodikOldal * sin(hegyesSzog * (M_PI / 180))) / 2;
     i++;
   }
 
   for (double j : teruletek) {
-    if(j >= 2000 && j <= 8000) {
+    if (j >= 2000 && j <= 8000) {
       cout << j << endl;
     } else {
-//      cout << "not: " << teruletek[j] << endl;
+      //      cout << "not: " << teruletek[j] << endl;
     }
   }
 

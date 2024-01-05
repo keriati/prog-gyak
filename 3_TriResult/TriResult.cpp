@@ -52,14 +52,14 @@ string tri_result(string fbe) {
   file.close();
 
   int maxTime = 0;
-  string maxLicense;
+  string LastPlaceLicence;
 
   for (auto &triathlete : triathleteArray) {
     if (triathlete.sum > maxTime) {
       maxTime = triathlete.sum;
-      maxLicense = triathlete.licence;
+      LastPlaceLicence = triathlete.licence;
     }
   }
 
-  return maxLicense;
+  return LastPlaceLicence;
 }
